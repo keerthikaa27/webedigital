@@ -1,0 +1,308 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --bg: #f6f7f3;
+  --surface: #ffffff;
+  --surface-alt: #edf2eb;
+  --ink: #102330;
+  --muted: #52616d;
+  --line: rgba(16, 35, 48, 0.1);
+  --brand-navy: #112c37;
+  --brand-navy-deep: #0c202a;
+  --brand-green: #d5ef73;
+  --brand-cyan: #77b6cb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-inter), "Segoe UI", Arial, Helvetica, sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+}
+
+.display-font {
+  font-family: var(--font-inter), "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+.grid-lines {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.mesh-panel {
+  background:
+    radial-gradient(circle at top left, rgba(119, 182, 203, 0.45), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(213, 239, 115, 0.42), transparent 26%),
+    linear-gradient(135deg, #183847 0%, #102732 48%, #0e1d25 100%);
+}
+
+.soft-panel {
+  background:
+    linear-gradient(135deg, rgba(123, 198, 211, 0.25), rgba(255, 255, 255, 0)),
+    linear-gradient(180deg, #ffffff, #f0f4ed);
+}
+
+.timeline-panel {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(200, 241, 105, 0.5), transparent 18%),
+    radial-gradient(circle at 85% 30%, rgba(123, 198, 211, 0.3), transparent 16%),
+    linear-gradient(180deg, #163240, #102631);
+}
+
+.section-line {
+  border-top: 1px solid var(--line);
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(48px);
+  opacity: 0.38;
+}
+
+.hero-orb-one {
+  right: -5rem;
+  top: -3rem;
+  height: 15rem;
+  width: 15rem;
+  background: rgba(119, 182, 203, 0.4);
+}
+
+.hero-orb-two {
+  bottom: -4rem;
+  left: 32%;
+  height: 12rem;
+  width: 12rem;
+  background: rgba(213, 239, 115, 0.3);
+}
+
+.problem-lines {
+  background-image:
+    linear-gradient(rgba(16, 35, 48, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 35, 48, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  left: -60px;
+  top: 0;
+  bottom: 0;
+  width: 55%;
+  background-image: url("data:image/svg+xml,...");
+  opacity: 1;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid #1a2447;
+  padding: 16px 34px;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+@keyframes floatBlob {
+  0%, 100% { transform: translate(0,0) rotate(0deg); }
+  50% { transform: translate(15px, -25px) rotate(2deg); }
+}
+
+.animate-floatBlob {
+  animation: floatBlob 8s ease-in-out infinite;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
+
+
+
+@keyframes tiltSlow {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(1deg); }
+}
+
+.animate-tiltSlow {
+  animation: tiltSlow 6s ease-in-out infinite;
+}
+
+@keyframes arcMove1 {
+  0%   { transform: rotate(0deg) translateX(0px); }
+  90%  { transform: rotate(8deg) translateX(6px); }
+  100%  { transform: rotate(3deg) translateX(-4px); }
+  100% { transform: rotate(0deg) translateX(0px); }
+}
+
+@keyframes arcMove2 {
+  0%   { transform: rotate(0deg) translateY(0px); }
+  100%  { transform: rotate(-6deg) translateY(8px); }
+  100% { transform: rotate(0deg) translateY(0px); }
+}
+
+.animate-arc1 {
+  animation: arcMove1 18s ease-in-out infinite;
+}
+
+.animate-arc2 {
+  animation: arcMove2 22s ease-in-out infinite;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.input:focus {
+  border-color: #00c9b1;
+  box-shadow: 0 0 0 2px rgba(0,201,177,0.15);
+}
+
+/* Hide scrollbar by default */
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+/* Show scrollbar ONLY on hover or scroll */
+.custom-scroll:hover::-webkit-scrollbar-thumb,
+.custom-scroll:active::-webkit-scrollbar-thumb {
+  background: rgba(0, 201, 177, 0.6);
+}
+
+/* Firefox */
+.custom-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.custom-scroll:hover {
+  scrollbar-color: rgba(0, 201, 177, 0.6) transparent;
+}@keyframes scaleIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.check-path {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: drawCheck 0.5s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes drawCheck {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.4s ease forwards;
+}
+
+.animate-ripple {
+  animation: ripple 1s ease-out infinite;
+}
+
