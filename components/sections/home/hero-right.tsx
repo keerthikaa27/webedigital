@@ -6,27 +6,19 @@ export default function HeroRight() {
       {/* ══════════════════════════════════════════
           DESKTOP  (lg and above) — UNCHANGED
           ══════════════════════════════════════════ */}
-      <div className="relative hidden h-[580px] w-full items-end justify-center lg:flex">
-
-        {/* Person cutout */}
-        <img
-          src="/cutout-removebg-preview.png"
-          alt="Tom Augustine"
-          className="absolute bottom-0 right-[5%] z-20 select-none animate-fadeIn"
-          style={{
-            height: "95%",
-            maxWidth: "520px",
-            filter: "drop-shadow(0 30px 40px rgba(0,0,0,0.25))",
-          }}
-        />
-
-        {/* Floating name tag */}
-        <div className="absolute bottom-16 left-[10%] z-30 bg-white px-6 py-3 shadow-xl animate-fadeUp delay-200">
-          <span className="text-[15px] font-bold text-[#1B2D4F] whitespace-nowrap">
-            Tom Augustine, Intero Web Division, Columbus, OH
-          </span>
-        </div>
-      </div>
+      <div className="relative hidden lg:flex w-full items-end justify-center min-h-[700px] xl:min-h-[760px] 2xl:min-h-[860px]">
+  <img
+    src="/cutout-removebg-preview.png"
+    alt="Tom Augustine"
+    className="absolute bottom-0 right-[2%] z-20 select-none animate-fadeIn"
+    style={{
+      height: "clamp(620px, 48vw, 900px)",
+      width: "auto",
+      maxWidth: "42vw",
+      filter: "drop-shadow(0 30px 40px rgba(0,0,0,0.25))",
+    }}
+  />
+</div>
 
       {/* ══════════════════════════════════════════
           MOBILE  (below lg)
@@ -77,12 +69,7 @@ export default function HeroRight() {
           />
         </div>
 
-        {/* Name tag — sits just below the dome */}
-        <div className="mt-3 bg-white px-5 py-2.5 shadow-md">
-          <span className="text-[13px] font-bold text-[#1B2D4F]">
-            Tom Augustine — Intero Web Division, Columbus OH
-          </span>
-        </div>
+        
       </div>
     </>
   );

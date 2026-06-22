@@ -79,7 +79,7 @@ Build a website that does more than look good. WebeDigital creates fast, respons
             <div className="absolute inset-[-16px] rounded-[40%_60%_55%_45%/_45%_55%_60%_40%] border border-[#00c9b1]/20 animate-[spin_20s_linear_infinite]" />
             <div className="absolute inset-[-8px] rounded-[55%_45%_40%_60%/_60%_40%_45%_55%] border border-white/10 animate-[spin_15s_linear_infinite_reverse]" />
             <div className="absolute inset-0 overflow-hidden" style={{ borderRadius: "42% 58% 55% 45% / 48% 52% 62% 38%", border: "2px solid rgba(0,201,177,0.3)" }}>
-              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80" alt="Web design team" className="w-full h-full object-cover scale-110" style={{ filter: "brightness(0.85) saturate(1.1)" }} />
+              <img src="/web.png" alt="Web design team" className="w-full h-full object-cover scale-110" style={{ filter: "brightness(0.85) saturate(1.1)" }} />
               <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,201,177,0.25) 0%, transparent 60%)" }} />
             </div>
            
@@ -105,7 +105,7 @@ Build a website that does more than look good. WebeDigital creates fast, respons
           <div className="absolute" style={{ width: "88%", height: "88%", borderRadius: "40% 60% 55% 45% / 45% 55% 60% 40%", border: "1.5px solid rgba(0,201,177,0.2)", animation: "spin 20s linear infinite" }} />
           <div className="absolute" style={{ width: "94%", height: "94%", borderRadius: "55% 45% 40% 60% / 60% 40% 45% 55%", border: "1px solid rgba(255,255,255,0.07)", animation: "spin 15s linear infinite reverse" }} />
           <div className="relative overflow-hidden shadow-2xl" style={{ width: "72%", height: "90%", borderRadius: "42% 58% 55% 45% / 48% 52% 62% 38%", border: "2px solid rgba(0,201,177,0.25)" }}>
-            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="Web design team" className="w-full h-full object-cover" style={{ filter: "brightness(0.85) saturate(1.1)" }} />
+            <img src="/web.png" alt="Web design team" className="w-full h-full object-cover" style={{ filter: "brightness(0.85) saturate(1.1)" }} />
             <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,201,177,0.2) 0%, transparent 60%)" }} />
           </div>
           

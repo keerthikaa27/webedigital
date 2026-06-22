@@ -881,7 +881,7 @@ WebeDigital helps brands run Ads with clearer strategy, sharper targeting, bette
           <div className="relative flex items-center justify-center" style={{ minHeight: 420 }}>
             <div className="absolute" style={{width:"90%",height:"90%",background:"linear-gradient(135deg, rgba(46,196,182,0.25), rgba(30,58,95,0.6))",transform:"rotate(-3deg)",borderRadius:"24px",zIndex:0}}/>
             <div className="relative overflow-hidden shadow-2xl" style={{width:"72%",height:380,clipPath:"polygon(0 0, 100% 0, 100% 85%, 0 100%)",borderRadius:"24px",zIndex:1,boxShadow:"0 30px 80px rgba(0,0,0,0.45)"}}>
-              <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&q=80" className="w-full h-full object-cover" alt="Paid media team"/>
+              <img src="/performance.png" className="w-full h-full object-cover" alt="Paid media team"/>
               <div className="absolute inset-0" style={{background:"linear-gradient(135deg, rgba(46,196,182,0.12), rgba(26,39,68,0.30))"}}/>
             </div>
             <div className="absolute bottom-6 right-0 bg-white rounded-2xl px-4 py-3 shadow-xl flex items-center gap-3 z-10">
@@ -909,7 +909,7 @@ WebeDigital helps brands run Ads with clearer strategy, sharper targeting, bette
 
         {/* Image */}
         <div className="mob-hero-img-wrap">
-          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=700&q=80" alt="Paid media team"/>
+          <img src="/performance.png" alt="Paid media team"/>
           <div className="mob-hero-img-overlay"/>
           <div className="mob-hero-badge">
             <div className="mob-hero-badge-icon">
@@ -971,7 +971,7 @@ Conor Bidet had paid campaigns running across Meta and Google, but the account n
             <div className="relative flex items-center justify-center" style={{minHeight:360}}>
               <div className="absolute inset-0 rounded-2xl" style={{background:"linear-gradient(135deg,#e8f4f8,#d0eef8)",transform:"rotate(-3deg)"}}/>
               <div className="relative overflow-hidden rounded-2xl shadow-xl" style={{width:"92%",height:340}}>
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=80" alt="Client spotlight" className="w-full h-full object-cover"/>
+                <img src="/performance2.png" alt="Client spotlight" className="w-full h-full object-cover"/>
                 <div className="absolute inset-0 flex items-center justify-center" style={{background:"rgba(26,39,68,0.35)"}}>
                   <div className="text-center text-white px-6">
                     <div className="text-xs font-bold tracking-widest uppercase mb-2 opacity-80">Client Spotlight</div>
@@ -997,7 +997,7 @@ Conor Bidet had paid campaigns running across Meta and Google, but the account n
 
         {/* Image */}
         <div className="mob-img">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&q=80" alt="Conor Bidet case study"/>
+          <img src="/performance2.png" alt="Conor Bidet case study"/>
           <div style={{position:"absolute",inset:0,background:"rgba(26,39,68,0.38)",display:"flex",alignItems:"center",justifyContent:"center",flexDirection:"column",gap:4}}>
             <span style={{fontSize:10,fontWeight:700,letterSpacing:"0.15em",color:"rgba(255,255,255,0.75)",fontFamily:"'Poppins',sans-serif",textTransform:"uppercase"}}>Client Spotlight</span>
             <span style={{fontSize:26,fontWeight:900,color:"#fff",fontFamily:"'Poppins',sans-serif"}}>CONOR BIDET</span>
@@ -1053,7 +1053,7 @@ function NewStrategySection() {
             <div className="relative flex items-center justify-center" style={{minHeight:420}}>
               <div className="absolute inset-0" style={{background:"linear-gradient(135deg,#e0f7f5,#c6f0ea)",borderRadius:"40% 60% 60% 40% / 40% 40% 60% 60%"}}/>
               <div className="relative overflow-hidden shadow-2xl" style={{width:"78%",height:380,borderRadius:"30% 70% 70% 30% / 30% 30% 70% 70%"}}>
-                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80" alt="Paid media strategy" className="w-full h-full object-cover"/>
+                <img src="/performance3.png" alt="Paid media strategy" className="w-full h-full object-cover"/>
               </div>
               <div className="absolute top-10 right-4 flex items-center justify-center text-white text-3xl font-black rounded-2xl shadow-xl" style={{width:110,height:110,background:"#2ec4b6",borderRadius:"18px 18px 18px 0",fontFamily:"'Poppins',sans-serif",transform:"rotate(-5deg)"}}>ADS</div>
             </div>
@@ -1085,7 +1085,7 @@ Many ad accounts do not fail suddenly. They slowly become harder to scale. The d
 
         {/* Image */}
         <div className="mob-img">
-          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80" alt="Paid media strategy"/>
+          <img src="/performance3.png" alt="Paid media strategy"/>
           <div className="mob-ads-badge" style={{position:"absolute",top:14,right:14,margin:0}}>ADS</div>
         </div>
 

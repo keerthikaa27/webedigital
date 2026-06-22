@@ -45,6 +45,42 @@ const BLOGS: Blog[] = [
     image:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
   },
+  {
+    id: "fashion-accelerator-seo-case-study",
+    title: "How We Ranked a Fashion Accelerator #1 for Almost All Core Keywords in Under 90 Days",
+    excerpt:
+      "Ranking #1 is rarely about doing more SEO. It is about owning the category more clearly than everyone else. Here is how focused execution helped a fashion accelerator take control of its core keyword landscape in under 90 days.",
+    tag: "SEO",
+    date: "Jun 2026",
+    readTime: "12 min read",
+    author: "Vaibhav M.",
+    authorInitials: "VM",
+    image: "/fashion.png",
+  },
+  {
+    id: "golf-dtc-brand-organic-growth",
+    title: "80K+ Organic Clicks: How We Scaled a Golf DTC Brand from Messy Traffic to Millions of Impressions",
+    excerpt:
+      "Traffic alone does not create scale. Structure does. This case study cum blog shows how we turned a messy organic setup into a growth system that drove 80K+ clicks and millions of impressions for a leading US-based golf brand.",
+    tag: "SEO",
+    date: "Jun 2026",
+    readTime: "11 min read",
+    author: "Vaibhav M.",
+    authorInitials: "VM",
+    image: "/golf.png",
+  },
+  {
+    id: "why-most-paid-campaigns-fail",
+    title: "Why Most Paid Campaigns Fail - And the Attribution Model That 4.2× Our Clients’ ROAS",
+    excerpt:
+      "If Meta and Google both look profitable, but scaling still feels strangely hard, your attribution model may be the real problem. This breakdown shows how a cleaner reporting view helped unlock a 4.2x ROAS outcome.",
+    tag: "PPC",
+    date: "Jun 2026",
+    readTime: "10 min read",
+    author: "Vaibhav M.",
+    authorInitials: "VM",
+    image: "/Roas.png",
+  },
   
 ];
 
@@ -267,7 +303,11 @@ function BlogCard({ blog }: { blog: Blog }) {
                 className="w-8 h-8 rounded-full flex items-center justify-center text-white text-[11px] font-bold"
                 style={{ backgroundColor: tagColor }}
               >
-                {blog.authorInitials}
+                <img
+  src="/vaibhav.png"
+  alt={blog.author}
+  className="w-8 h-8 rounded-full object-cover"
+/>
               </div>
               <span className="text-gray-700 text-xs font-semibold">{blog.author}</span>
             </div>
@@ -343,7 +383,11 @@ function MobileBlogCard({ blog }: { blog: Blog }) {
                 className="w-5 h-5 rounded-full flex items-center justify-center text-white text-[8px] font-bold flex-shrink-0"
                 style={{ backgroundColor: tagColor }}
               >
-                {blog.authorInitials}
+                <img
+  src="/vaibhav.png"
+  alt={blog.author}
+  className="w-full h-full object-cover"
+/>
               </div>
               <span className="text-[10px] text-gray-500 font-semibold truncate">{blog.author}</span>
             </div>

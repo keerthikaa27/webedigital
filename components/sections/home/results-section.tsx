@@ -1,21 +1,25 @@
 import { Container } from "@/components/site-shell/container";
+import Link from "next/link";
 
 export function ResultsSection() {
   const data = [
     {
       title: "How We Ranked a Fashion Accelerator #1 for Almost All Core Keywords in Under 90 Days",
       desc: "By Vaibhav M. / April 6, 2026",
-      img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+      img: "/fashion.png",
+      slug: "fashion-accelerator-seo-case-study",
     },
     {
       title: "80K+ Organic Clicks: How We Scaled a Golf DTC Brand from Messy Traffic to Millions of Impressions",
       desc: "By Vaibhav M. / April 7, 2026",
-      img: "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80",
+      img: "/golf.png",
+      slug: "golf-dtc-brand-organic-growth",
     },
     {
       title: "Why Most Paid Campaigns Fail - And the Attribution Model That 4.2× Our Clients’ ROAS",
       desc: "By Vaibhav M. / April 8, 2026",
-      img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+      img: "/Roas.png",
+      slug: "why-most-paid-campaigns-fail",
     },
   ];
 
@@ -45,9 +49,12 @@ export function ResultsSection() {
         <div className="grid gap-8 lg:grid-cols-3">
 
           {data.map((item, i) => (
-            <div
-              key={i}
-              className="
+            <Link
+            key={i}
+            href={`/blog/${item.slug}`}
+            className="block"
+          >
+              <div className="
                 rounded-[26px]
                 bg-[#f1f3ef]
                 overflow-hidden
@@ -90,7 +97,10 @@ export function ResultsSection() {
                 </p>
 
               </div>
+              
             </div>
+            </Link>
+
           ))}
 
         </div>

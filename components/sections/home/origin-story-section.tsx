@@ -56,7 +56,7 @@ export function OriginStorySection() {
             <div className="absolute top-0 left-5 flex items-start gap-[6px] z-[2]">
               <div className="w-[7px] h-[148px] rounded bg-[#3da978] flex-shrink-0" />
               <img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=400&q=80"
+                src="/w1.png"
                 alt="Team 1996"
                 className="w-[210px] h-[148px] object-cover rounded-[14px]"
               />
@@ -65,7 +65,7 @@ export function OriginStorySection() {
             {/* IMAGE 2 — overlapping, smaller, rotated */}
             <div className="absolute top-[110px] left-[200px] z-[4] -rotate-[5deg]">
               <img
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80"
+                src="/w2.png"
                 alt="Team 2009"
                 className="w-[160px] h-[112px] object-cover rounded-[14px]"
               />
@@ -75,7 +75,7 @@ export function OriginStorySection() {
             <div className="absolute top-[230px] left-5 flex items-start gap-[6px] z-[2]">
               <div className="w-[7px] h-[120px] rounded bg-[#2ec4b6] flex-shrink-0" />
               <img
-                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=400&q=80"
+                src="/w3.png"
                 alt="Team 2013"
                 className="w-[180px] h-[120px] object-cover rounded-[14px]"
               />
@@ -92,7 +92,7 @@ export function OriginStorySection() {
             <div className="absolute bottom-0 left-[310px] flex items-start gap-[6px] z-[2]">
               <div className="w-[7px] h-[148px] rounded bg-[#3da978] flex-shrink-0" />
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80"
+                src="/w4.png"
                 alt="Team Today"
                 className="w-[210px] h-[148px] object-cover rounded-[14px]"
               />

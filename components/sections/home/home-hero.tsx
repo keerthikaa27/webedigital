@@ -6,7 +6,7 @@ import HeroRight from "@/components/sections/home/hero-right";
 
 export function HomeHero() {
   return (
-    <section className="relative w-full overflow-hidden bg-white">
+    <section className="relative min-h-screen overflow-hidden bg-white">
 
       {/* ─────────────────────────────────────────
           ARC BACKGROUND
@@ -35,7 +35,19 @@ export function HomeHero() {
           Mobile  : single column, centred
           Desktop : two equal columns, text left
           ───────────────────────────────────────── */}
-      <Container className="relative z-10 grid w-full max-w-screen-xl mx-auto items-start gap-0 pt-8 pb-0 px-5 sm:px-8 lg:px-12 lg:gap-10 lg:grid-cols-[1fr_1fr]">
+      <Container className="
+relative z-10
+grid
+w-full
+max-w-[1700px]
+mx-auto
+items-center
+gap-10
+px-8
+xl:px-16
+2xl:px-24
+lg:grid-cols-[1.05fr_0.95fr]
+">
 
         {/* TEXT */}
         <div className="animate-fadeUp flex flex-col items-center text-center lg:items-start lg:text-left justify-start pt-3 lg:pt-5">

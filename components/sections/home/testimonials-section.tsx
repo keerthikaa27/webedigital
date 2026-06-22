@@ -238,8 +238,8 @@ Madhu Kargunda – Founder, Tengin
               }}
             >
               <img
-                src="/image-removebg-preview.png"
-                alt="Bianca Buliga"
+                src="/mohbymeera.png"
+                alt="Manisha Maheshwari"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
             </div>

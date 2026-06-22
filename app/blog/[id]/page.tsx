@@ -433,7 +433,11 @@ const post = BLOG_POSTS?.find(
                   className="w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-bold"
                   style={{ backgroundColor: tagColor }}
                 >
-                  {post.authorInitials}
+                  <img
+  src="/vaibhav.png"
+  alt={post.author}
+  className="w-9 h-9 rounded-full object-cover border border-white/20"
+/>
                 </div>
                 <div>
                   <p className="text-white text-sm font-semibold leading-none">{post.author}</p>
