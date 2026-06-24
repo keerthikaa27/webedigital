@@ -1,5 +1,5 @@
 import { ChannelColumns } from "@/components/sections/home/channel-columns";
-import { HomeHero } from "@/components/sections/home/home-hero";
+import { HomeHero } from "@/components/sections/home/HomeHero";
 import { OriginStorySection } from "@/components/sections/home/origin-story-section";
 import { ProblemSection } from "@/components/sections/home/problem-section";
 import { ResultsSection } from "@/components/sections/home/results-section";
