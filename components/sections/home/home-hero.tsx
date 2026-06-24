@@ -6,17 +6,16 @@ import HeroRight from "@/components/sections/home/hero-right";
 
 export function HomeHero() {
   return (
-    <section
-      className="relative overflow-hidden bg-white"
-      style={{ minHeight: "600px", height: "clamp(600px, 52vw, 760px)" }}
-    >
-      {/* ─── ARC BACKGROUND (desktop only) ─── */}
+    <section className="relative overflow-hidden bg-white">
+
+      {/* ARC BACKGROUND — desktop only
+          Uses vw-based ellipse so it scales with viewport width, not height.
+          No height dependency at all. */}
       <div
         className="absolute inset-0 z-0 hidden lg:block"
         style={{
-          background:
-            "linear-gradient(135deg, #2db89a 0%, #1a9e82 60%, #148a6e 100%)",
-          clipPath: "ellipse(58% 140% at 108% 50%)",
+          background: "linear-gradient(135deg, #2db89a 0%, #1a9e82 60%, #148a6e 100%)",
+          clipPath: "ellipse(56% 160% at 107% 50%)",
         }}
       >
         <img
@@ -28,34 +27,34 @@ export function HomeHero() {
         <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,60,50,0.45)] to-transparent" />
       </div>
 
-      {/* ─── CONTENT GRID ─── */}
+      {/* CONTENT — section height is driven by this content, not the other way around */}
       <Container
         className="
           relative z-10
           grid
-          h-full
-          min-h-[inherit]
           w-full
           max-w-[1700px]
           mx-auto
-          items-center
+          items-stretch
           gap-10
           px-8
           xl:px-16
           2xl:px-24
           lg:grid-cols-[1.1fr_0.9fr]
-          py-12
+          py-16
           lg:py-0
         "
       >
-        {/* TEXT */}
-        <div className="animate-fadeUp flex flex-col items-center text-center lg:items-start lg:text-left">
-          <p className="mb-4 text-[22px] sm:text-[26px] lg:text-[clamp(18px,1.4vw,22px)] font-semibold text-[#2EC4B6]">
+        {/* TEXT — vertically centred by the grid */}
+        <div className="animate-fadeUp flex flex-col items-center justify-center text-center lg:items-start lg:text-left lg:py-20">
+
+          <p className="mb-4 text-[22px] lg:text-[20px] xl:text-[22px] font-semibold text-[#2EC4B6]">
             Integrated Digital Growth Team for Modern Brands
           </p>
 
-          <h1 className="mb-6 text-[2.6rem] sm:text-[3.2rem] lg:text-[clamp(2.4rem,3vw,3.8rem)] font-extrabold leading-[1.05] text-[#0d2b4e]">
-            Digital Marketing That <br /> Builds Visibility, Leads, and Revenue
+          <h1 className="mb-6 font-extrabold leading-[1.05] text-[#0d2b4e] text-[2.6rem] lg:text-[2.6rem] xl:text-[3rem] 2xl:text-[3.4rem]">
+            Digital Marketing That<br />
+            Builds Visibility,<br className="hidden xl:block" /> Leads, and Revenue
           </h1>
 
           <p className="mb-8 max-w-[480px] text-[15px] sm:text-[16px] leading-relaxed text-gray-700">

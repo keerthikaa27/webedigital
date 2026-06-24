@@ -1,45 +1,39 @@
 export default function HeroRight() {
   return (
     <>
-      {/* ══ DESKTOP (lg and above) ══ */}
-      <div className="relative hidden h-full w-full items-end justify-center lg:flex">
+      {/* ══ DESKTOP (lg and above) ══
+          The column is `items-stretch` so this div fills the full grid row height.
+          The image is 85% of that column height — always proportional, never fixed. */}
+      <div className="relative hidden w-full lg:flex items-end justify-center"
+        style={{ minHeight: "520px" }}
+      >
 
-        {/* Person cutout — scales with viewport, never clips the section */}
+        {/* Person cutout — 85% of the column, anchored to bottom */}
         <img
           src="/cutout-removebg-preview.png"
           alt="Vaibhav Maheshwari"
-          className="absolute bottom-0 z-20 select-none animate-fadeIn"
+          className="absolute bottom-[52px] z-20 select-none animate-fadeIn"
           style={{
-            right: "3%",
-            /*
-              clamp(380px, 38vw, 560px):
-              - never smaller than 380px (small lg screens)
-              - scales naturally with viewport width
-              - never taller than 560px (huge screens)
-              The section height is clamp(600px,52vw,760px), so the
-              image always has ~40px breathing room at bottom.
-            */
-            height: "clamp(380px, 38vw, 560px)",
+            right: "5%",
+            height: "85%",
+            maxHeight: "540px",
+            minHeight: "380px",
             width: "auto",
-            maxWidth: "90%",
-            marginBottom: "52px",   /* room for name tag */
+            maxWidth: "86%",
             filter: "drop-shadow(0 30px 40px rgba(0,0,0,0.25))",
           }}
         />
 
-        {/* Name tag — sits just above section bottom edge */}
+        {/* Name tag — always 14px above section bottom edge */}
         <div
           className="absolute z-30 animate-fadeIn"
-          style={{
-            right: "3%",
-            bottom: "14px",         /* anchored from section bottom */
-          }}
+          style={{ right: "5%", bottom: "14px" }}
         >
           <div
             style={{
               background: "white",
               borderRadius: "12px",
-              padding: "12px 20px",
+              padding: "10px 18px",
               boxShadow: "0 4px 24px rgba(0,0,0,0.10)",
               display: "inline-flex",
               alignItems: "center",
@@ -47,28 +41,16 @@ export default function HeroRight() {
               whiteSpace: "nowrap",
             }}
           >
-            <span
-              style={{
-                fontSize: "clamp(13px, 1vw, 15px)",
-                fontWeight: 700,
-                color: "#0d2b4e",
-                letterSpacing: "-0.01em",
-              }}
-            >
+            <span style={{ fontSize: "14px", fontWeight: 700, color: "#0d2b4e", letterSpacing: "-0.01em" }}>
               Vaibhav Maheshwari, WebeDigital
             </span>
             <span style={{ color: "#d1d5db", fontSize: "14px" }}>•</span>
-            <span
-              style={{
-                fontSize: "clamp(11px, 0.85vw, 13px)",
-                fontWeight: 500,
-                color: "#2db89a",
-              }}
-            >
+            <span style={{ fontSize: "13px", fontWeight: 500, color: "#2db89a" }}>
               Founder &amp; Growth Strategist
             </span>
           </div>
         </div>
+
       </div>
 
       {/* ══ MOBILE (below lg) — unchanged ══ */}
