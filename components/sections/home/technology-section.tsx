@@ -54,7 +54,7 @@ export function TechnologySection() {
 
                   </p>
                   <Link
-                    href="/services/seo-geo"
+                    href="/services"
                     className="mt-10 inline-block rounded-full bg-[#ff5a2c] px-8 py-4 text-sm font-bold uppercase tracking-wide text-white shadow-lg transition hover:bg-[#e14a1f]"
                   >
                     See How We Build Growth

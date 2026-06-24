@@ -64,19 +64,18 @@ function FunnelRow({ width, color, label, items }: any) {
         {items.map((item: string, i: number) => {
           const Icon = iconMap[item];
           return (
-            <Link
-              key={i}
-              href={`/services/${item.toLowerCase().replace(/\s+/g, "-")}`}
-              className="group flex flex-col items-center text-center text-white transition-all duration-300 hover:text-white/40"
-              style={{ flex: 1 }}
-            >
+            <div
+  key={i}
+  className="group flex flex-col items-center text-center text-white transition-all duration-300 hover:text-white/40 cursor-pointer"
+  style={{ flex: 1 }}
+>
               <div className="mb-3 transition-all duration-300">
                 {Icon && <Icon size={36} strokeWidth={1.0} />}
               </div>
               <span className="text-[15px] font-normal leading-tight tracking-wide">
                 {item}
               </span>
-            </Link>
+            </div>
           );
         })}
       </div>

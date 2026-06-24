@@ -1,11 +1,11 @@
 ﻿import Link from "next/link";
-import { BrandMark } from "@/components/site-shell/brand-mark";
+import Image from "next/image";
+import logofooter from "@/public/logofooter.png";
 import { Container } from "@/components/site-shell/container";
 import { primaryNavigation } from "@/data/navigation";
 
 const socials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/company/webedigitalseo/" },
-  { label: "Twitter", href: "#" },
 ];
 
 const services = [
@@ -53,14 +53,21 @@ export function SiteFooter() {
 
             {/* Col 1 – Brand */}
             <div className="space-y-6">
-              <BrandMark light />
-              <p className="text-[13px] leading-[1.8] text-white/55 max-w-[280px]">
+              <Image
+  src={logofooter}
+  alt="Webe Digital"
+  width={120}
+  height={20}
+  className="h-auto w-[140px] lg:w-[160px]"
+  priority
+/>
+              <p className="text-[14px] leading-[1.8] text-white/55 max-w-[280px]">
                 Webe Digital is a performance-driven marketing agency helping brands scale through strategy, creativity, and data.
               </p>
               <div className="space-y-2 pt-2">
                 <a
                   href="mailto:hello@webedigital.com"
-                  className="flex items-center gap-2.5 text-[13px] text-white/65 hover:text-white transition-colors group"
+                  className="flex items-center gap-2.5 text-[14px] text-white/65 hover:text-white transition-colors group"
                 >
                   <span className="w-7 h-7 rounded-full bg-white/8 flex items-center justify-center group-hover:bg-[#ff3b5c]/20 transition-colors">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -72,7 +79,7 @@ export function SiteFooter() {
                 </a>
                 <a
                   href="tel:+91 9376091963"
-                  className="flex items-center gap-2.5 text-[13px] text-white/65 hover:text-white transition-colors group"
+                  className="flex items-center gap-2.5 text-[14px] text-white/65 hover:text-white transition-colors group"
                 >
                   <span className="w-7 h-7 rounded-full bg-white/8 flex items-center justify-center group-hover:bg-[#ff3b5c]/20 transition-colors">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -86,7 +93,7 @@ export function SiteFooter() {
 
             {/* Col 2 – Navigation */}
             <div>
-              <h3 className="text-[11px] uppercase tracking-[0.18em] font-semibold text-[#02bbfe] mb-6">
+              <h3 className="text-[14px] uppercase tracking-[0.18em] font-semibold text-[#02bbfe] mb-6">
                 Navigate
               </h3>
               <ul className="space-y-3">
@@ -94,7 +101,7 @@ export function SiteFooter() {
                   <li key={group.label}>
                     <Link
                       href={group.href ?? group.children?.[0]?.href ?? "/"}
-                      className="text-[13px] text-white/60 hover:text-white transition-colors hover:translate-x-1 inline-flex items-center gap-1.5 group"
+                      className="text-[14px] text-white/60 hover:text-white transition-colors hover:translate-x-1 inline-flex items-center gap-1.5 group"
                     >
                       <span className="w-0 overflow-hidden group-hover:w-3 transition-all duration-200 opacity-0 group-hover:opacity-100 text-[#02bbfe]">→</span>
                       {group.label}
@@ -106,7 +113,7 @@ export function SiteFooter() {
 
             {/* Col 3 – Services */}
             <div>
-              <h3 className="text-[11px] uppercase tracking-[0.18em] font-semibold text-[#02bbfe] mb-6">
+              <h3 className="text-[14px] uppercase tracking-[0.18em] font-semibold text-[#02bbfe] mb-6">
                 Services
               </h3>
               <ul className="space-y-3">
@@ -114,7 +121,7 @@ export function SiteFooter() {
                   <li key={s.href}>
                     <Link
                       href={s.href}
-                      className="text-[13px] text-white/60 hover:text-white transition-colors hover:translate-x-1 inline-flex items-center gap-1.5 group"
+                      className="text-[14px] text-white/60 hover:text-white transition-colors hover:translate-x-1 inline-flex items-center gap-1.5 group"
                     >
                       <span className="w-0 overflow-hidden group-hover:w-3 transition-all duration-200 opacity-0 group-hover:opacity-100 text-[#02bbfe]">→</span>
                       {s.label}
@@ -126,23 +133,23 @@ export function SiteFooter() {
 
             {/* Col 4 – Newsletter + Socials */}
             <div>
-              <h3 className="text-[11px] uppercase tracking-[0.18em] font-semibold text-[#02bbfe] mb-6">
+              <h3 className="text-[14px] uppercase tracking-[0.18em] font-semibold text-[#02bbfe] mb-6">
                 Stay in the Loop
               </h3>
-              <p className="text-[13px] text-white/55 leading-[1.75] mb-5">
+              <p className="text-[14px] text-white/55 leading-[1.75] mb-5">
                 Get marketing insights, case studies, and agency updates — straight to your inbox.
               </p>
               <div className="flex gap-0 mb-8">
                 <input
                   type="email"
                   placeholder="your@email.com"
-                  className="flex-1 bg-white/6 border border-white/12 rounded-l-lg px-4 py-2.5 text-[13px] text-white placeholder:text-white/30 focus:outline-none focus:border-[#02bbfe]/50 transition-colors"
+                  className="flex-1 bg-white/6 border border-white/12 rounded-l-lg px-4 py-2.5 text-[14px] text-white placeholder:text-white/30 focus:outline-none focus:border-[#02bbfe]/50 transition-colors"
                 />
-                <button className="bg-[#02bbfe] hover:bg-[#02bbfe] transition-colors text-white text-[12px] font-semibold px-4 py-2.5 rounded-r-lg tracking-wide">
+                <button className="bg-[#02bbfe] hover:bg-[#02bbfe] transition-colors text-white text-[14px] font-semibold px-4 py-2.5 rounded-r-lg tracking-wide">
                   JOIN
                 </button>
               </div>
-              <h4 className="text-[11px] uppercase tracking-[0.18em] font-semibold text-white/40 mb-3">
+              <h4 className="text-[14px] uppercase tracking-[0.18em] font-semibold text-white/40 mb-3">
                 Follow Us
               </h4>
               <div className="flex flex-wrap gap-2">
@@ -150,7 +157,7 @@ export function SiteFooter() {
                   <a
                     key={label}
                     href={href}
-                    className="text-[11px] font-medium text-white/55 hover:text-white border border-white/12 hover:border-[#02bbfe]/50 hover:bg-[#ff3b5c]/8 rounded-md px-3 py-1.5 transition-all tracking-wide"
+                    className="text-[14px] font-medium text-white/55 hover:text-white border border-white/12 hover:border-[#02bbfe]/50 hover:bg-[#ff3b5c]/8 rounded-md px-3 py-1.5 transition-all tracking-wide"
                   >
                     {label}
                   </a>
@@ -165,15 +172,24 @@ export function SiteFooter() {
               © 2026 Webe Digital. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((item) => (
-                <Link
-                  key={item}
-                  href="#"
-                  className="text-[11px] text-white/30 hover:text-white/60 transition-colors tracking-wide"
-                >
-                  {item}
-                </Link>
-              ))}
+            {[
+  {
+    label: "Privacy Policy",
+    href: "/privacy-policy",
+  },
+  {
+    label: "Terms of Service",
+    href: "/terms-of-service",
+  },
+].map((item) => (
+  <Link
+    key={item.label}
+    href={item.href}
+    className="text-[14px] text-white/30 hover:text-white/60 transition-colors tracking-wide"
+  >
+    {item.label}
+  </Link>
+))}
             </div>
           </div>
         </Container>
@@ -191,8 +207,15 @@ export function SiteFooter() {
 
         {/* ── COL 1: Brand — centred ── */}
         <div className="flex flex-col items-center text-center space-y-5 mb-10">
-          <BrandMark light />
-          <p className="text-[13px] leading-[1.8] text-white/55 max-w-[280px]">
+          <Image
+  src={logofooter}
+  alt="Webe Digital"
+  width={220}
+  height={60}
+  className="h-auto w-[220px]"
+  priority
+/>
+          <p className="text-[14px] leading-[1.8] text-white/55 max-w-[280px]">
             Webe Digital is a performance-driven marketing agency helping brands scale through strategy, creativity, and data.
           </p>
           {/* Contact — centred */}
@@ -315,15 +338,24 @@ export function SiteFooter() {
             © 2026 Webe Digital. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-5">
-            {["Privacy Policy", "Terms of Service", "Cookie Policy"].map((item) => (
-              <Link
-                key={item}
-                href="#"
-                className="text-[11px] text-white/30 hover:text-white/60 transition-colors tracking-wide"
-              >
-                {item}
-              </Link>
-            ))}
+          {[
+  {
+    label: "Privacy Policy",
+    href: "/privacy-policy",
+  },
+  {
+    label: "Terms of Service",
+    href: "/terms-of-service",
+  },
+].map((item) => (
+  <Link
+    key={item.label}
+    href={item.href}
+    className="text-[14px] text-white/30 hover:text-white/60 transition-colors tracking-wide"
+  >
+    {item.label}
+  </Link>
+))}
           </div>
         </div>
 

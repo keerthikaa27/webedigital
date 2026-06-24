@@ -318,6 +318,7 @@ console.log("BLOG_POSTS =", BLOG_POSTS);
 const post = BLOG_POSTS?.find(
   (p) => p.id === id
 );
+const [showAuthor, setShowAuthor] = useState(false);
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
@@ -360,6 +361,8 @@ const post = BLOG_POSTS?.find(
     },
     keywords: post.keywords?.join(", "),
   };
+
+  
 
   return (
     <>
@@ -428,22 +431,26 @@ const post = BLOG_POSTS?.find(
 
             {/* Meta */}
             <div className="flex items-center gap-4 flex-wrap">
-              <div className="flex items-center gap-2.5">
-                <div
-                  className="w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-bold"
-                  style={{ backgroundColor: tagColor }}
-                >
-                  <img
-  src="/vaibhav.png"
-  alt={post.author}
-  className="w-9 h-9 rounded-full object-cover border border-white/20"
-/>
-                </div>
-                <div>
-                  <p className="text-white text-sm font-semibold leading-none">{post.author}</p>
-                  <p className="text-white/50 text-xs mt-0.5">{post.date}</p>
-                </div>
-              </div>
+            <button
+  onClick={() => setShowAuthor(true)}
+  className="flex items-center gap-2.5 cursor-pointer group"
+>
+  <img
+    src="/vaibhav.png"
+    alt={post.author}
+    className="w-10 h-10 rounded-full object-cover border border-white/20 group-hover:scale-105 transition-transform"
+  />
+
+  <div className="text-left">
+    <p className="text-white text-sm font-semibold leading-none group-hover:text-[#00c9b1] transition-colors">
+      {post.author}
+    </p>
+
+    <p className="text-white/50 text-xs mt-0.5">
+      {post.date}
+    </p>
+  </div>
+</button>
               <span className="text-white/30 hidden sm:block">·</span>
               <span className="text-white/60 text-sm">{post.readTime}</span>
             </div>
@@ -574,6 +581,89 @@ const post = BLOG_POSTS?.find(
             </div>
           </div>
         </section>
+        {showAuthor && (
+  <div
+  className="fixed inset-0 z-[9999] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-hidden"    onClick={() => setShowAuthor(false)}
+  >
+    <div
+  onClick={(e) => e.stopPropagation()}
+  className="bg-white rounded-3xl max-w-xl w-full shadow-2xl flex flex-col max-h-[90vh]"
+>
+      <div className="bg-[#0f1b3d] rounded-lg px-8 py-10 text-center relative">
+        <button
+          onClick={() => setShowAuthor(false)}
+          className="absolute top-5 right-5 text-white/70 hover:text-white"
+        >
+          ✕
+        </button>
+
+        <img
+          src="/vaibhav.png"
+          alt="Vaibhav Maheshwari"
+          className="w-28 h-28 rounded-full object-cover border-4 border-white mx-auto mb-5"
+        />
+
+        <h3 className="text-white text-2xl font-bold">
+          Vaibhav Maheshwari
+        </h3>
+
+        <p className="text-[#00c9b1] mt-2 font-medium">
+          Founder & Digital Growth Strategist
+        </p>
+      </div>
+
+      <div
+  className="p-8 overflow-y-auto"
+  style={{
+    scrollbarWidth: "thin",
+    scrollbarColor: "#cbd5e1 transparent",
+  }}
+>
+        <p className="text-gray-700 leading-8 mb-6">
+        Vaibhav Maheshwari is the founder of WebeDigital, where he helps businesses improve online visibility, attract qualified leads, and build stronger digital growth systems through SEO, paid advertising, content strategy, website growth, and conversion-focused marketing.
+
+        </p>
+
+        <p className="text-gray-700 leading-8 mb-6">
+        His work focuses on practical growth - not vanity metrics. From improving organic search visibility to building performance-driven campaigns and better website experiences, Vaibhav works with brands to turn digital presence into measurable business outcomes.
+        </p>
+
+        <p className="text-gray-700 leading-8 mb-6">
+At WebeDigital, he leads strategy across SEO, content, paid media, website optimization, analytics, and growth planning, helping businesses make smarter marketing decisions backed by data, execution, and long-term consistency.
+</p>
+
+        <div className="grid grid-cols-3 gap-4 mt-8">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-[#0f1b3d]">
+              30+
+            </div>
+            <div className="text-xs text-gray-500 uppercase">
+              Projects
+            </div>
+          </div>
+
+          <div className="text-center">
+            <div className="text-2xl font-bold text-[#0f1b3d]">
+              11+
+            </div>
+            <div className="text-xs text-gray-500 uppercase">
+              Industries
+            </div>
+          </div>
+
+          <div className="text-center">
+            <div className="text-2xl font-bold text-[#0f1b3d]">
+              97%
+            </div>
+            <div className="text-xs text-gray-500 uppercase">
+              Client Retention
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
       </main>
     </>
   );

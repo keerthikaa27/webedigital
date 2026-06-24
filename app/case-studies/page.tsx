@@ -217,12 +217,11 @@ function CaseStudyCard({ cs, index }: { cs: CaseStudy; index: number }) {
             </div>
             <div className="flex items-center justify-between pt-5 border-t border-gray-100">
             <div className="flex items-center gap-3">
-  <div
-    className="w-8 h-8 rounded-full flex items-center justify-center text-white text-[11px] font-bold tracking-wide"
-    style={{ backgroundColor: cs.color }}
-  >
-    VM
-  </div>
+            <img
+  src="/vaibhav.png"
+  alt="Vaibhav Maheshwari"
+  className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm"
+/>
 
   <div className="flex flex-col leading-tight">
     <span className="text-[#1a1f5e] text-sm font-semibold">
