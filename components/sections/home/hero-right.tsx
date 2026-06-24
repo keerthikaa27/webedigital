@@ -1,36 +1,38 @@
 export default function HeroRight() {
   return (
     <>
-      {/* ══════════════════════════════════════════
-          DESKTOP (lg and above)
-          h-full fills the parent grid row (600px).
-          Image is fixed 480px — identical everywhere.
-          ══════════════════════════════════════════ */}
+      {/* ══ DESKTOP (lg and above) ══ */}
       <div className="relative hidden h-full w-full items-end justify-center lg:flex">
 
-        {/* Person cutout */}
+        {/* Person cutout — scales with viewport, never clips the section */}
         <img
           src="/cutout-removebg-preview.png"
           alt="Vaibhav Maheshwari"
           className="absolute bottom-0 z-20 select-none animate-fadeIn"
           style={{
             right: "3%",
-            height: "480px",
+            /*
+              clamp(380px, 38vw, 560px):
+              - never smaller than 380px (small lg screens)
+              - scales naturally with viewport width
+              - never taller than 560px (huge screens)
+              The section height is clamp(600px,52vw,760px), so the
+              image always has ~40px breathing room at bottom.
+            */
+            height: "clamp(380px, 38vw, 560px)",
             width: "auto",
-            maxWidth: "450px",
-            marginBottom: "40px",
+            maxWidth: "90%",
+            marginBottom: "52px",   /* room for name tag */
             filter: "drop-shadow(0 30px 40px rgba(0,0,0,0.25))",
           }}
         />
 
-        {/* Name tag */}
+        {/* Name tag — sits just above section bottom edge */}
         <div
           className="absolute z-30 animate-fadeIn"
           style={{
-            right: "4%",
-            bottom: "-8px",
-            width: "450px",
-            maxWidth: "450px",
+            right: "3%",
+            bottom: "14px",         /* anchored from section bottom */
           }}
         >
           <div
@@ -41,15 +43,13 @@ export default function HeroRight() {
               boxShadow: "0 4px 24px rgba(0,0,0,0.10)",
               display: "inline-flex",
               alignItems: "center",
-              justifyContent: "center",
               gap: "10px",
-              width: "fit-content",
               whiteSpace: "nowrap",
             }}
           >
             <span
               style={{
-                fontSize: "15px",
+                fontSize: "clamp(13px, 1vw, 15px)",
                 fontWeight: 700,
                 color: "#0d2b4e",
                 letterSpacing: "-0.01em",
@@ -60,7 +60,7 @@ export default function HeroRight() {
             <span style={{ color: "#d1d5db", fontSize: "14px" }}>•</span>
             <span
               style={{
-                fontSize: "13px",
+                fontSize: "clamp(11px, 0.85vw, 13px)",
                 fontWeight: 500,
                 color: "#2db89a",
               }}
@@ -69,14 +69,10 @@ export default function HeroRight() {
             </span>
           </div>
         </div>
-
       </div>
 
-      {/* ══════════════════════════════════════════
-          MOBILE (below lg) — completely unchanged
-          ══════════════════════════════════════════ */}
+      {/* ══ MOBILE (below lg) — unchanged ══ */}
       <div className="flex w-full flex-col items-center pb-8 pt-6 lg:hidden">
-
         <div
           className="relative flex items-end justify-center overflow-hidden"
           style={{
@@ -108,7 +104,6 @@ export default function HeroRight() {
           />
         </div>
 
-        {/* Name tag below dome on mobile */}
         <div
           className="mt-4 w-full max-w-[300px]"
           style={{
@@ -125,7 +120,6 @@ export default function HeroRight() {
             Founder &amp; Growth Strategist
           </p>
         </div>
-
       </div>
     </>
   );
